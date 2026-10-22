@@ -1,87 +1,106 @@
 # Student Performance Prediction
 
-## 1. Live Project (Render)
-https://student-performance-prediction-cafm.onrender.com
+A machine learning web application that predicts a student's Performance Index using study habits, previous scores, sleep hours, extracurricular activities, and practice question papers.
 
-## 2. GitHub Repository (Source Code)
-https://github.com/sahithyaadimulam/student-performance-prediction
+## 🔗 Project Links
 
-## 3. Render Dashboard
-https://dashboard.render.com/
+| Resource | Link |
+|---|---|
+| **Live Application (Render)** | [Open Live App](https://student-performance-prediction-cafm.onrender.com) |
+| **GitHub Repository** | [View Source Code](https://github.com/sahithyaadimulam/student-performance-prediction) |
+| **Render Dashboard** | [Manage Deployment](https://dashboard.render.com/) |
+| **Docker Hub Repository** | [View Docker Image](https://hub.docker.com/r/sahithyaadimulam/student-performance-prediction) |
+| **Docker Image Tags** | [View Available Tags](https://hub.docker.com/r/sahithyaadimulam/student-performance-prediction/tags) |
+| **Local Application** | [http://localhost:8501](http://localhost:8501) |
+| **Google Colab** | [Open Google Colab](https://colab.research.google.com/) |
+| **Kaggle Dataset** | [Student Performance Dataset](https://www.kaggle.com/datasets/nikhil7280/student-performance-multiple-linear-regression) |
 
-## 4. Local Docker App
-http://localhost:8501
+> **Note:** The live application may take a little time to start if the hosting service has put it to sleep. The local application link works only when the Docker container is running with port 8501 mapped to your computer.
 
-Note: The local Docker link works only when the Docker container is running on your computer.
+## 🛠️ Technologies Used
 
-## 5. Google Colab
-https://colab.research.google.com/
-
-Open your saved Student Performance Prediction notebook from Google Drive.
-
-## 6. Kaggle Dataset
-https://www.kaggle.com/datasets/nikhil7280/student-performance-multiple-linear-regression
-
-## Technologies Used
 - Python
 - Pandas
 - Scikit-learn
 - Streamlit
+- Joblib
+- Docker
 - GitHub
 - Render
-- Docker
+- Google Colab
 
-## Model Evaluation
-- MAE: 1.61
-- MSE: 4.08
-- RMSE: 2.02
-- R² Score: 0.989
-# Student Performance Prediction
+## ✨ Features
 
-A machine learning application that predicts student performance using study habits and previous scores. Built with Python, Streamlit, scikit-learn, and Docker.
+- Predicts a student's Performance Index.
+- Accepts hours studied and previous scores.
+- Includes extracurricular activity participation.
+- Considers sleep hours.
+- Includes the number of sample question papers practiced.
+- Provides an interactive web interface using Streamlit.
+- Packages the application and trained model using Docker.
 
-## Project Links
+## 🤖 Machine Learning Model
 
-- **Docker Hub Repository:** https://hub.docker.com/r/sahithyaadimulam/student-performance-prediction
-- **Docker Image Tags:** https://hub.docker.com/r/sahithyaadimulam/student-performance-prediction/tags
-- **Run Locally:** http://localhost:8502
+**Algorithm:** Linear Regression
 
-## Technologies Used
+The model was trained using student performance data with five input features.
 
-- Python
-- Pandas
-- scikit-learn
-- Streamlit
-- Docker
+### Model Evaluation Results
 
-## Features
+| Metric | Result |
+|---|---:|
+| Mean Absolute Error (MAE) | 1.61 |
+| Mean Squared Error (MSE) | 4.08 |
+| Root Mean Squared Error (RMSE) | 2.02 |
+| R² Score | 0.989 |
 
-- Enter study hours and previous scores.
-- Select extracurricular activity participation.
-- Enter sleep hours and sample question papers practiced.
-- Predict a student's performance index.
+The R² score of 0.989 indicates that the model explains approximately 98.9% of the variance in the target values on the evaluated test set.
 
-## Run the Docker Image
+## 🐳 Run Using Docker
 
-Make sure Docker Desktop is running, then open a terminal and execute:
+Make sure Docker Desktop is running.
+
+### 1. Download the image
 
 ```bash
 docker pull sahithyaadimulam/student-performance-prediction:latest
-docker run -p 8502:8501 sahithyaadimulam/student-performance-prediction:latest
 ```
 
-Open this address in your browser:
+### 2. Run the container
 
-http://localhost:8502
+```bash
+docker run -p 8501:8501 sahithyaadimulam/student-performance-prediction:latest
+```
 
-## Docker Image
+### 3. Open the application
 
-Repository: `sahithyaadimulam/student-performance-prediction`
+Visit:
 
-Tag: `latest`
+http://localhost:8501
 
-Platform: `linux/amd64`
+Keep the terminal running while you use the application.
 
-## Project Status
+## 📁 Main Project Files
 
-The Docker image has been built, tested locally, and pushed to Docker Hub.
+- `app.py` — Streamlit web application.
+- `requirements.txt` — Python dependencies.
+- `Dockerfile` — Docker image build instructions.
+- `student_performance_model.pkl` — Saved trained model.
+
+## 🚀 Deployment
+
+The application is available through Render, and the Docker image is published on Docker Hub.
+
+- Live app: https://student-performance-prediction-cafm.onrender.com
+- Source code: https://github.com/sahithyaadimulam/student-performance-prediction
+- Docker image: https://hub.docker.com/r/sahithyaadimulam/student-performance-prediction
+
+## 👩‍💻 Author
+
+**Sahithya Adimulam**
+
+GitHub: https://github.com/sahithyaadimulam
+
+---
+
+*This project demonstrates data preparation, machine learning model training and evaluation, interactive application development, containerization, and deployment.*
